@@ -30,6 +30,14 @@ function generatePassword() {
 //1 = true (include)
 //2 = false (exclude)
 passwordLength = prompt( 'How long do you want your password? (8-128)');
+if (passwordLength < 8){ 
+    alert('password too short');
+    return; 
+}
+if (passwordLength > 128){ 
+    alert('password too long');
+    return; 
+}
 //Upper Case letter prompt
 if (confirm( 'Do you want to include Uppercase letters?')) {
 confirmUppercase = 1;
